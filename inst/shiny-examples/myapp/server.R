@@ -34,11 +34,11 @@ if(!require(desctable)){install.packages('desctable')}
 if(!require(gmrcfun)){install_github(repo = "jgodet/gmrcfun")}; library(gmrcfun)
 
 server <- shinyServer(function(input, output, session) {
-  #session$onSessionEnded(stopApp)
-  #session$onSessionEnded(function() {
+  session$onSessionEnded(stopApp)
+  session$onSessionEnded(function() {
 
-  # stopApp()
-  #})
+   stopApp()
+  })
 
 
 
